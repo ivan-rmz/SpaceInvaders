@@ -14,6 +14,7 @@
 		FBDB11F7274FE47500D69B96 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBDB11F6274FE47500D69B96 /* GameViewController.swift */; };
 		FBDB11FA274FE47500D69B96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBDB11F8274FE47500D69B96 /* Main.storyboard */; };
 		FBDB11FC274FE47900D69B96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBDB11FB274FE47900D69B96 /* Assets.xcassets */; };
+		FBDB1204274FEFDA00D69B96 /* bulletShot.wav in Resources */ = {isa = PBXBuildFile; fileRef = FBDB1203274FEFDA00D69B96 /* bulletShot.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		FBDB11F9274FE47500D69B96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FBDB11FB274FE47900D69B96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FBDB11FD274FE47900D69B96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FBDB1203274FEFDA00D69B96 /* bulletShot.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bulletShot.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				FBDB11F6274FE47500D69B96 /* GameViewController.swift */,
 				FBDB11F8274FE47500D69B96 /* Main.storyboard */,
 				FBDB11FB274FE47900D69B96 /* Assets.xcassets */,
+				FBDB1203274FEFDA00D69B96 /* bulletShot.wav */,
 				FBDB11FD274FE47900D69B96 /* Info.plist */,
 			);
 			path = SpaceInvaders;
@@ -130,6 +133,7 @@
 				FBDB11FA274FE47500D69B96 /* Main.storyboard in Resources */,
 				FBDB11F1274FE47500D69B96 /* GameScene.sks in Resources */,
 				FBDB11FC274FE47900D69B96 /* Assets.xcassets in Resources */,
+				FBDB1204274FEFDA00D69B96 /* bulletShot.wav in Resources */,
 				FBDB11F3274FE47500D69B96 /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,6 +288,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SpaceInvaders/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,6 +307,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SpaceInvaders/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
