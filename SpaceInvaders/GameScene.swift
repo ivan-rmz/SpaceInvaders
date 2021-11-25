@@ -120,6 +120,7 @@ class GameScene: SKScene {
             
             player.position.x  += amountDragged
             
+            
             //Too far right
             if player.position.x > (gameArea.maxX){ //- player.size.width/2
                 
