@@ -8,12 +8,25 @@
 import UIKit
 import SpriteKit
 import GameplayKit
+import AVFoundation
 
 class GameViewController: UIViewController {
+    
+    var backingAudio = AVAudioPlayer()
 
     override func viewDidLoad() {
 
         super.viewDidLoad()
+        let filePath = Bundle.main.path(forResource: "Space Invaders Song", ofType: "mp3")
+        let audioURL = URL(fileURLWithPath: filePath!)
+        
+        do{ backingAudio = try AVAudioPlayer(contentsOf: audioURL) }
+        catch{
+            return print("Cannot play audio")
+        }
+        
+        backingAudio.numberOfLoops = -1
+        backingAudio.play()
 
         if let view = self.view as! SKView? {
             // Load the SKScene from 'GameScene.sks'

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D4898792757E9F100A19F09 /* Space Invaders Song.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0D4898782757E9F100A19F09 /* Space Invaders Song.mp3 */; };
 		0D57C5A9275767DC009AFCE1 /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D57C5A8275767DC009AFCE1 /* GameOverScene.swift */; };
 		0DACDE212755353E00E92F86 /* shortExplosion.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0DACDE202755353E00E92F86 /* shortExplosion.wav */; };
 		0DACDE23275546A900E92F86 /* theboldfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0DACDE222755465500E92F86 /* theboldfont.ttf */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D4898782757E9F100A19F09 /* Space Invaders Song.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Space Invaders Song.mp3"; sourceTree = "<group>"; };
 		0D57C5A8275767DC009AFCE1 /* GameOverScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
 		0DACDE202755353E00E92F86 /* shortExplosion.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = shortExplosion.wav; sourceTree = "<group>"; };
 		0DACDE222755465500E92F86 /* theboldfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = theboldfont.ttf; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 				0DACDE222755465500E92F86 /* theboldfont.ttf */,
 				FBDB1203274FEFDA00D69B96 /* bulletShot.wav */,
 				0DACDE202755353E00E92F86 /* shortExplosion.wav */,
+				0D4898782757E9F100A19F09 /* Space Invaders Song.mp3 */,
 				FBDB11FD274FE47900D69B96 /* Info.plist */,
 			);
 			path = SpaceInvaders;
@@ -141,6 +144,7 @@
 			files = (
 				0DACDE23275546A900E92F86 /* theboldfont.ttf in Resources */,
 				FBDB11FA274FE47500D69B96 /* Main.storyboard in Resources */,
+				0D4898792757E9F100A19F09 /* Space Invaders Song.mp3 in Resources */,
 				0DACDE212755353E00E92F86 /* shortExplosion.wav in Resources */,
 				FBDB11F1274FE47500D69B96 /* GameScene.sks in Resources */,
 				FBDB11FC274FE47900D69B96 /* Assets.xcassets in Resources */,

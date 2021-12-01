@@ -66,11 +66,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         self.physicsWorld.contactDelegate = self
         //Initialize and add background
-        let background = SKSpriteNode(imageNamed: "background")
-        background.size = self.size
-        background.position = CGPoint(x: self.size.width/2, y: self.size.height/2)
-        background.zPosition = 0
-        self.addChild(background)
+        for i in 0...1{
+            let background = SKSpriteNode(imageNamed: "background")
+            background.size = self.size
+            background.anchorPoint = CGPoint(x: 0.5, y: 0)
+            
+            background.position = CGPoint(x: self.size.width/2, y: self.size.height*CGFloat(i))
+            background.zPosition = 0
+            background.name = "Background"
+            self.addChild(background)
+        }
         
         //Add player
         player.setScale(1)
@@ -119,8 +124,42 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         //startNewLevel()
     }
+    var lastUpdtTime: TimeInterval = 0
+    var deltaFrameTime: TimeInterval = 0
+    var amountToMovePerSec: CGFloat = 600.0
+    
+    override func update(_ currentTime: TimeInterval) {
+        if lastUpdtTime == 0{
+            lastUpdtTime = currentTime
+        }else{
+            deltaFrameTime = currentTime - lastUpdtTime
+            lastUpdtTime = currentTime
+        }
+        
+        let amountToMoveBackground = amountToMovePerSec * CGFloat(deltaFrameTime)
+        self.enumerateChildNodes(withName: "Background") { background, stop in
+            if self.currentGameState == gameState.inGame{
+                background.position.y -= amountToMoveBackground
+            }
+            if background.position.y < -self.size.height{
+                background.position.y += self.size.height*2
+                
+            }
+        }
+        
+    }
     
     func startGame(){
+        currentGameState = gameState.inGame
+        let fadeOutAction = SKAction.fadeOut(withDuration: 0.5)
+        let deleteAction = SKAction.removeFromParent()
+        let deleteSequence = SKAction.sequence([fadeOutAction, deleteAction])
+        tapStartLabel.run(deleteSequence)
+        
+        let moveShipScreen = SKAction.moveTo(y: self.size.height*0.2, duration: 0.5)
+        let startLevelAction = SKAction.run(startNewLevel)
+        let startGameSequence = SKAction.sequence([moveShipScreen, startLevelAction])
+        player.run(startGameSequence)
         
     }
     
@@ -316,6 +355,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        if currentGameState == gameState.preGame{
+            startGame()
+        }
+        
         if currentGameState == gameState.inGame{
             fireBullet()
         }
